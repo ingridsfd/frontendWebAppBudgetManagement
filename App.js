@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import { Button, Stack } from 'react-bootstrap'
-import BudgetCard from './components/BudgetCard'
+import BudgetCard from './src/components/formComponents/Dynamic'
 
 
 const App = () => {
