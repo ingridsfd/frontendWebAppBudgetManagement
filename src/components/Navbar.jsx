@@ -10,6 +10,7 @@ const Navbar = () => {
     <div>
         <Link to='/'>Home</Link>
         <Link to='/dashboard'>Dashboard</Link>
+        <Link to='/rutas'>Settings</Link>
         <button onClick={redirect}>dashboard redirect javascript</button>
     </div>
   )

@@ -6,7 +6,7 @@ const Dashboard = () => {
     <div>
       <h1>Actual balance: *insert balance*</h1>
       <Routes>
-        <Route path='/' element={<h2> Local transactions</h2>} />
+        <Route path='/' element={<h2> Record Local transactions</h2>} />
         <Route path='/' element={<h2> Add expense or income</h2>}/>
         <Route path='/config' element={<h2> config dashboard</h2>}/>
         <Route path='/list' element={<h2> list dashboard</h2>}/>

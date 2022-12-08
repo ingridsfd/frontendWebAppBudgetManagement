@@ -17,10 +17,10 @@ const Formulario = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <p>E-mail:{data.name}</p>
+                <p>E-mail:{data.email}</p>
                 <input value={data.name} name='email' onChange={handleChange} placeholder='Put E-mail...' />
                 <p>Password:</p>
-                <input value={data.email} name='password' onChange={handleChange} placeholder='Create Password...' />
+                <input value={data.password} name='password' onChange={handleChange} placeholder='Create Password...' />
                 <button type='submit'>ENVIAR</button>
             </form>
         </div>

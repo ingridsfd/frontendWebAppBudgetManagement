@@ -2,12 +2,13 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 //componets
 import Navbar from './components/Navbar';
 import ProtectorRoute from './components/ProtectorRoute';
-import Formulario from './components/formComponents/Formulario';
 //views
-import Dashboard from './views/Dashboard';
-import MainPage from './views/Home';
-import List from './views/List';
-import SubRutas from './views/SubRutas';
+import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
+import List from './pages/AccountsList';
+import SubRutas from './pages/SubRutas';
+import LogIn from './pages/LogIn';
+import FormularioFormik from './pages/Register';
 
 
 function App() {
@@ -16,10 +17,12 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<MainPage />} />
+        <Route path='/register' element={<FormularioFormik />}/>
+        <Route path='/login' element={<LogIn />} />
+        <Route path='/' element={<Home />} />
         <Route path='/rutas' element={<SubRutas/>}>
-          <Route index element={<h1> main rutas</h1>}/>
-          <Route path='hi' element={<h1> hi rutas</h1>}/>
+          <Route index element={<h1> Settings </h1>}/>
+          <Route path='changePass' element={<h1> Change password</h1>}/>
         </Route>
         <Route path='/list/:id' element={<List />} />
         <Route path='/dashboard/*' element={
@@ -29,7 +32,6 @@ function App() {
         } />
         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
-      <Formulario/>
     </>
   );
 }
