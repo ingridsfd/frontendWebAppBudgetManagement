@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "accountName": "Jenny Chan",
+    "accountNumber": "45345345",
+    "balance": "$900 USD",
+    "cardType": "Credit"
+  },
+  {
+    "id": 2,
+    "accountName": "Jessica warren",
+    "accountNumber": "0935613",
+    "balance": "$1000 MXN",
+    "cardType": "Debit"
+  },
+  {
+    "id": 3,
+    "accountName": "Tony Frank",
+    "accountNumber": "9123297",
+    "balance": "$10000 USD",
+    "cardType": "Credit"
+  },
+  {
+    "id": 4,
+    "accountName": "Jeremy Clark",
+    "accountNumber": "2098484",
+    "balance": "$510 MXN",
+    "cardType": "Debit"
+  },
+  {
+    "id": 5,
+    "accountName": "Raymond Edwards",
+    "accountNumber": "867823",
+    "balance": "$213 USD",
+    "cardType": "Debit"
+  }
+]
