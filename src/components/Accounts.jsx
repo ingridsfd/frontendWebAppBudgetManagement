@@ -8,6 +8,7 @@ const Accounts = () => {
     //variables
     const [contacts, setContacts] = useState(data);
     const [addFormData, setAddFormData] = useState({
+        id: '',
         accountName: '',
         accountNumber: '',
         balance: '',
@@ -48,8 +49,9 @@ return (
         <Table striped bordered hover>
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Name of account</th>
-                    <th>Account number</th>
+                    <th>Account ID</th>
                     <th>Balance</th>
                     <th>Card type</th>
                 </tr>
@@ -57,6 +59,7 @@ return (
             <tbody>
                 {contacts.map((contacts) => (
                 <tr>
+                    <td>{contacts.id}</td>    
                     <td>{contacts.accountName}</td>
                     <td>{contacts.accountNumber}</td>
                     <td>{contacts.balance}</td>
