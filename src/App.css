@@ -38,12 +38,6 @@
     }
 }
 
-section {
-    color: rgb(0, 0, 0);
-    background-color: #f8f8f8e8;
-    height: 100vh;
-}
-
-.navBg {
-    background-color: #2e64ba;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

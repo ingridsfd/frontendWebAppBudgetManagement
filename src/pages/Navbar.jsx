@@ -1,30 +1,48 @@
-import React from 'react'
-import { Outlet, Link } from "react-router-dom"
-import {Navbar, Nav, Container} from "react-bootstrap"
+import React from "react";
+import { Link } from "react-router-dom";
+//remember to fix Navbar padding
 
-
-const NavbarVar = () => {
+function Navbar() {
   return (
-      
-      <>
-      <Navbar className="navBg" variant="dark" expand="lg">
-        <Container>
-          <Navbar.Brand as={Link} to={"/"}>yourBankOnline</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-              <Nav.Link as={Link} to="/" >Home</Nav.Link>
-              <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
-              <Nav.Link as={Link} to="/history">History</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <section>
-        <Outlet></Outlet>
-      </section>
-      </>
-  )
+    <>
+      <div className="w-ful h-16 flex space-x-4 space-y-4 bg-blue-500 font-Montserrat">
+        <div>
+          <Link to={"/"} className="px-14 text-3xl text-white font-semibold">
+            yourBankOnline
+          </Link>
+        </div>
+        <div>
+          <Link to={"/"} className="rounded-lg font-bold text-white py-2 px-2">
+            Home
+          </Link>
+        </div>
+        <div>
+          <Link
+            to={"/dashboard"}
+            className="rounded-lg font-bold text-white py-2 px-2"
+          >
+            Dashboard
+          </Link>
+        </div>
+        <div>
+          <Link
+            to={"/history"}
+            className="rounded-lg font-bold text-white py-2 px-2"
+          >
+            History
+          </Link>
+        </div>
+        <div>
+          <Link
+            to={"/logout"}
+            className="hover:bg-white hover:text-black hover:shadow-md rounded-lg font-bold text-white py-2 px-2"
+          >
+            Log out
+          </Link>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default NavbarVar
+export default Navbar;
