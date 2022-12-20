@@ -1,8 +1,8 @@
 [
   {
-    "id": 1,
-    "accountName": "Jenny Chan",
-    "accountNumber": "45345345",
+    "id": 1, 
+    "accountName": "Jenny Chan", 
+    "accountNumber": "45345345", 
     "balance": "$900 USD",
     "cardType": "Credit"
   },

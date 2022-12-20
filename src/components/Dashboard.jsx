@@ -22,9 +22,9 @@ const Dashboard = () => {
                         <td>$10 USD</td>
                         <td>Netflix purchase</td>
                         <td>
-                            <button class="btn btn-primary badge-pill float-right">Add</button>
-                            <button class="btn btn-primary badge-pill float-right">Edit</button>
-                            <button class="btn btn-danger badge-pill float-right">Delete</button>
+                            <button className="btn btn-primary badge-pill float-right">Add</button>{"  "}
+                            <button className="btn btn-primary badge-pill float-right">Edit</button>{"  "}
+                            <button className="btn btn-danger badge-pill float-right">Delete</button>
                         </td>
                         </tr>
                     </tbody>
