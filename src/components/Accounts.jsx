@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Accounts = () => {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
+  const loadUsers = () => {
     axios.get("http://localhost:3003/users").then((res) => {
-      setUsers(res.data);
+      setUsers(res.data.reverse());
     });
+  };
+
+  useEffect(() => {
+    loadUsers();
   }, []);
+
+  const Delete = (id) => {
+    axios.delete(`http://localhost:3003/users/${id}`).then(loadUsers());
+  };
 
   return (
     <div className="flex flex-col">
@@ -79,13 +88,19 @@ const Accounts = () => {
                       {data.cardType}
                     </td>
                     <td className="flex justify-center items-center space-x-2 mt-1">
-                      <button className="px-6 py-2 text-white font-normal bg-black rounded-lg">
+                      <Link
+                        to={`/users/${data.id}`}
+                        className="px-6 py-2 text-white font-normal bg-black rounded-lg"
+                      >
                         View
-                      </button>
+                      </Link>
                       <button className="px-6 py-2 text-white font-normal bg-blue-600 rounded-lg">
                         Edit
                       </button>
-                      <button className="px-6 py-2 text-white font-normal bg-red-600 rounded-lg">
+                      <button
+                        onClick={() => Delete(data.id)}
+                        className="px-6 py-2 text-white font-normal bg-red-600 rounded-lg"
+                      >
                         Delete
                       </button>
                     </td>
@@ -93,6 +108,14 @@ const Accounts = () => {
                 ))}
               </tbody>
             </table>
+            <div className="flex">
+              <Link
+                to={"/add-user"}
+                className="w-[142px] h-[40px] px-8 py-2 hover:bg-white hover:text-black hover:border-2 hover:border-black text-white font-normal bg-green-600 rounded-lg"
+              >
+                Add Users
+              </Link>
+            </div>
           </div>
         </div>
       </div>
