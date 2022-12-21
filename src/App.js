@@ -1,10 +1,14 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom'
+//pages
 import Navbar from './pages/Navbar';
 import Home from './pages/Home'
-import {Routes, Route} from 'react-router-dom'
+//components
 import Accounts from './components/Accounts' 
 import Dashboard from './components/Dashboard'
 import History from './components/History'
+import Transactions from './components/Transactions'
+import DivisaCon from './components/DivisaCon'
 
 function App() {
 
@@ -16,6 +20,8 @@ function App() {
         <Route path="/accounts" element={<Accounts />} />
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/history" element={<History />} />
+        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/divisas" element={<DivisaCon/>} />
       </Routes>
     </div>
   );
