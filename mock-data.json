@@ -36,18 +36,11 @@
       "cardType": "Debit"
     },
     {
-      "accountName": "Pepito Dineros",
-      "accountNumber": "78998654",
-      "balance": "$1000 MXN",
+      "accountName": "Bruce Wayne",
+      "accountNumber": "987763211",
+      "balance": "$5000 USD",
       "cardType": "Debit",
       "id": 6
-    },
-    {
-      "accountName": "Barbie Queue",
-      "accountNumber": "65478923",
-      "balance": "$73215 USD",
-      "cardType": "Credit",
-      "id": 7
     }
   ]
 }

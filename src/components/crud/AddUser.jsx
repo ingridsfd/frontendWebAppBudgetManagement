@@ -17,7 +17,7 @@ const AddUser = () => {
     cardType: cardType,
   };
 
-  const Submit = (e) => {
+  const submit = (e) => {
     e.preventDefault();
 
     axios.post("http://localhost:3003/users", data).then(navigate("/accounts"));
@@ -58,7 +58,7 @@ const AddUser = () => {
           className="w-[80%] bg-white/10 mt-4 text-xl font-Montserrat font-normal outline-none py-4 pl-6 border border-zinc-400 py-6 pl-6 mt-4"
         />
         <button
-          onClick={Submit}
+          onClick={submit}
           className="w-[80%] bg-blue-500 mt-4 text-white font-semibold text-xl font-Montserrat font-normal py-4 pl-6"
         >
           Submit

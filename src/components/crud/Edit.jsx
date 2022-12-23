@@ -27,12 +27,11 @@ const Edit = () => {
     cardType: cardType,
   };
 
-  const Update = (e) => {
+  const update = (e) => {
     e.preventDefault();
-    axios.put(
-      `http://localhost:3003/users/${id}`,
-      data.then(navigate("/accounts"))
-    );
+    axios
+      .put(`http://localhost:3003/users/${id}`, data)
+      .then(navigate("/accounts"));
   };
 
   return (
@@ -70,7 +69,8 @@ const Edit = () => {
           className="w-[80%] bg-white/10 mt-4 text-xl font-Montserrat font-normal outline-none py-4 pl-6 border border-zinc-400 py-6 pl-6 mt-4"
         />
         <button
-          onClick={Update}
+          onClick={update}
+          type="submit"
           className="w-[80%] bg-blue-500 mt-4 text-white font-semibold text-xl font-Montserrat font-normal py-4 pl-6"
         >
           Update

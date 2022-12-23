@@ -15,7 +15,7 @@ const Accounts = () => {
     loadUsers();
   }, []);
 
-  const Delete = (id) => {
+  const deleteUser = (id) => {
     axios.delete(`http://localhost:3003/users/${id}`).then(loadUsers());
   };
 
@@ -100,12 +100,13 @@ const Accounts = () => {
                       >
                         Edit
                       </Link>
-                      <button
-                        onClick={() => Delete(data.id)}
+                      <Link
+                        to={"#"}
+                        onClick={() => deleteUser(data.id)}
                         className="px-6 py-2 text-white font-normal bg-red-600 rounded-lg"
                       >
                         Delete
-                      </button>
+                      </Link>
                     </td>
                   </tr>
                 ))}
