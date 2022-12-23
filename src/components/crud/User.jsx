@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const User = () => {
   const [user, setUser] = useState();
@@ -14,10 +14,16 @@ const User = () => {
   const { id } = useParams();
 
   return (
-    <div className="w-full h-full flex justify-center intems-center">
+    <div className="w-full h-full flex flex-col justify-center intems-center">
+      <Link
+        to="/accounts"
+        className="w-[142px] h-[40px] px-8 py-1 text-black text-2xl font-bold bg-zinc-200 rounded-lg mt-4"
+      >
+        Back{" "}
+      </Link>
       {user && (
         <>
-          <div className="w-[700px] h-[200px] flex justify center items-center px-6 py-4 border-2 border-black mt-16">
+          <div className="w-[700px] h-[200px] flex justify center items-center px-6 py-4 border-2 border-black mt-8">
             <div className="w-5/12 flex flex-col space-y-4">
               <h2 className="text-black font-semibold font-inter text-2xl border-b border-black">
                 Name:

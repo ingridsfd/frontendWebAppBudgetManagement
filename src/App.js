@@ -12,6 +12,7 @@ import DivisaCon from './components/DivisaCon'
 //components-crud
 import User from './components/crud/User'
 import AddUser from './components/crud/AddUser'
+import Edit from './components/crud/Edit';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/accounts" element={<Accounts />} />
         <Route path="/users/:id" element={<User />} />
-        <Route path="/add-user" element={<AddUser/>}/>
+        <Route path="/add-user" element={<AddUser />} />
+        <Route path="/edit-user/:id" element={<Edit/>}/>
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/history" element={<History />} />
         <Route path="/transactions" element={<Transactions />} />
