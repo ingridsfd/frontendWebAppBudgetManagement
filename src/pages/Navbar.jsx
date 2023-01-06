@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <>
       <div className="w-ful h-16 flex space-x-4 space-y-4 bg-blue-500 font-Montserrat">
-        <div>
+        <div class="mt-2">
           <Link to={"/"} className="px-14 text-3xl text-white font-semibold">
             yourBankOnline
           </Link>
